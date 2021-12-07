@@ -1,7 +1,5 @@
 from fastapi import FastAPI
 
-from app.api import ping
-
 from app.api import ping, notes
 from app.db import engine, database, metadata
 
