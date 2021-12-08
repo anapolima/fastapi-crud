@@ -1,5 +1,5 @@
 import os
-
+from dotenv import load_dotenv
 from databases import Database
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy import (
@@ -13,7 +13,7 @@ from sqlalchemy import (
 )
 from sqlalchemy.sql import func
 
-
+load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
 # SQLAlchemy 
 engine = create_engine(DATABASE_URL) # used for communicating with the database
